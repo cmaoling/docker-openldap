@@ -1,5 +1,5 @@
-FROM osixia/light-baseimage:0.1.0
-MAINTAINER Bertrand Gouny <bertrand.gouny@osixia.net>
+FROM colinas/docker-light-baseimage
+MAINTAINER Colinas Maoling "colinas.maoling@t-online.de"
 
 # Use baseimage's init system.
 # https://github.com/osixia/docker-light-baseimage/blob/stable/image/tool/run
