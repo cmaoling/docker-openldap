@@ -18,7 +18,7 @@ RUN apt-get -y update \
 
 # Add service directory to /container/service
 ADD service /container/service
-
+RUN mkdir /etc/my_init.d/
 # Use baseimage install-service script and clean all
 # https://github.com/osixia/docker-light-baseimage/blob/stable/image/tool/install-service
 RUN /container/tool/install-service \
