@@ -18,11 +18,11 @@ RUN apt-get -y update \
 
 # Add service directory to /container/service
 ADD service /container/service
-RUN echo "/etc/my_init.d:"
+RUN echo "/etc/my_init.d:" >> /var/log/docker-openldap.log
 RUN ls -la /etc/my_init.d >> /var/log/docker-openldap.log
-RUN echo "/container/tool:"
+RUN echo "/container/tool:" >> /var/log/docker-openldap.log
 RUN ls -la /container/tool >> /var/log/docker-openldap.log
-RUN echo "/container/service:"
+RUN echo "/container/service:" >> /var/log/docker-openldap.log
 RUN ls -la /container/service >> /var/log/docker-openldap.log
 # Use baseimage install-service script and clean all
 # https://github.com/osixia/docker-light-baseimage/blob/stable/image/tool/install-service
